@@ -1,0 +1,1314 @@
+// Variables and normalize
+@import "variables";
+@import "normalize";
+
+body {
+	/*
+	* Color palette
+	*/
+	--color-dark-100: #{$dark-color};
+	--color-dark-90: #1e232a;
+	--color-dark-80: #2e343e;
+	--color-dark-70: #53585f;
+	--color-dark-30: #9da2a9;
+	--color-dark-20: #caced1;
+	--color-dark-10: #e0e5e8;
+	--color-dark-05: #f1f2f4;
+	--color-dark-blue: #175cc4;
+	--color-blue: #1d74f5;
+	--color-light-blue: #4eb2f5;
+	--color-lighter-blue: #e8f2ff;
+	--color-purple: #861da8;
+	--color-red: #f5455c;
+	--color-dark-red: #e0364d;
+	--color-orange: #f38c39;
+	--color-yellow: #ffd21f;
+	--color-dark-yellow: #f6c502;
+	--color-green: #2de0a5;
+	--color-dark-green: #26d198;
+
+	/*
+	* General Colors
+	*/
+	--color-darkest: #1f2329;
+	--color-dark: #{$dark-color};
+	--color-dark-medium: #414852;
+	--color-dark-light: #6c727a;
+	--color-gray: #{gray-color};
+	--color-gray-medium: #cbced1;
+	--color-gray-light: #e1e5e8;
+	--color-gray-lightest: #f2f3f5;
+	--color-black: #000000;
+	--color-white: #ffffff;
+
+	/* #region colors Colors */
+	--rc-color-error: var(--color-red);
+	--rc-color-error-light: #e1364c;
+	--rc-color-alert: var(--color-yellow);
+	--rc-color-alert-light: var(--color-dark-yellow);
+	--rc-color-success: var(--color-green);
+	--rc-color-success-light: #25d198;
+	--rc-color-button-primary: var(--color-blue);
+	--rc-color-button-primary-light: var(--color-dark-blue);
+	--rc-color-alert-message-primary: var(--color-blue);
+	--rc-color-alert-message-primary-background: #f1f6ff;
+	--rc-color-alert-message-secondary: #7ca52b;
+	--rc-color-alert-message-secondary-background: #fafff1;
+	--rc-color-alert-message-warning: #d52d24;
+	--rc-color-alert-message-warning-background: #fff3f3;
+	--rc-color-primary: var(--color-dark);
+	--rc-color-primary-background: var(--color-dark);
+	--rc-color-primary-darkest: var(--color-darkest);
+	--rc-color-primary-dark: var(--color-dark-medium);
+	--rc-color-primary-light: var(--color-gray);
+	--rc-color-primary-light-medium: var(--color-gray-medium);
+	--rc-color-primary-lightest: var(--color-gray-lightest);
+	--rc-color-content: var(--color-white);
+	--rc-color-link-active: var(--rc-color-button-primary);
+	--rc-color-announcement-text: #095ad2;
+	--rc-color-announcement-background: #d1ebfe;
+	--rc-color-announcement-text-hover: #01336b;
+	--rc-color-announcement-background-hover: #76b7fc;
+	/* #endregion */
+
+  /* #region fonts Fonts */
+	--body-font-family: #{$cjk-font-family};
+	/* #endregion */
+  
+	/*
+	* Forms - Button
+	*/
+	--button-square-size: 36px;
+	--button-padding: 0.782rem;
+	--button-padding-small: 0 0.5rem;
+	--button-height-small: 28px;
+	--button-text-size-small: 13px;
+	--button-text-size: var(--input-font-size);
+	--button-border-width: var(--border);
+	--button-border-radius: var(--border-radius);
+	--button-disabled-background: var(--color-gray-light);
+	--button-disabled-text-color: var(--color-white);
+	--button-primary-background: var(--rc-color-button-primary);
+	--button-primary-text-color: var(--color-white);
+	--button-cancel-color: var(--rc-color-error);
+	--button-secondary-background: var(--color-gray-medium);
+	--button-secondary-text-color: var(--color-dark-medium);
+
+	/*
+	* Forms - Input
+	*/
+	--input-font-size: 0.875rem;
+	--input-title-text-size: var(--input-font-size);
+	--input-title-color: #2d343d;
+	--input-text-color: var(--color-dark-medium);
+	--input-placeholder-color: var(--color-gray-medium);
+	--input-icon-color: var(--color-dark);
+	--input-border-color: var(--color-gray-light);
+	--input-border-width: var(--border);
+	--input-border-radius: var(--border-radius);
+	--input-description-text-color: var(--color-gray);
+	--input-description-text-size: var(--input-font-size);
+	--input-error-color: var(--rc-color-error);
+
+	/*
+	* Forms - popup list
+	*/
+	--popup-list-border-radius: var(--border-radius);
+	--popup-list-background: var(--color-white);
+	--popup-list-background-hover: var(--color-gray-lightest);
+	--popup-list-selected-background: var(--color-gray-lightest);
+	--popup-list-name-color: #2d343d;
+	--popup-list-name-size: 1rem;
+
+	/*
+	* Forms - tags
+	*/
+	--tags-border-width: var(--border);
+	--tags-border-radius: var(--border-radius);
+	--tags-border-color: var(--color-gray-light);
+	--tags-text-color: var(--rc-color-primary);
+	--tags-background: #f2f3f5;
+	--tags-avatar-size: 20px;
+
+	/*
+	* Forms - select avatar
+	*/
+	--select-avatar-size: 48px;
+	--select-avatar-preview-size: 150px;
+	--select-avatar-upload-background: var(--color-gray-light);
+	--select-avatar-upload-color: #2d343d;
+
+	/*
+	* Sidebar flex
+	*/
+	--sidebar-flex-search-background: var(--color-white);
+	--sidebar-flex-search-placeholder-color: var(--color-gray);
+
+	/*
+	* Sidebar Account
+	*/
+	--sidebar-account-thumb-size: 23px;
+	--sidebar-small-account-thumb-size: 40px;
+	--sidebar-account-status-bullet-size: 10px;
+	--sidebar-small-account-status-bullet-size: 8px;
+	--sidebar-account-status-bullet-radius: 50%;
+	--sidebar-account-username-size: 1rem;
+	--sidebar-account-username-weight: 700;
+	--sidebar-small-account-username-weight: 400;
+	--sidebar-account-username-color: var(--color-white);
+	--sidebar-account-username-color-darker: var(--color-dark);
+	--sidebar-account-status-font-size: 0.875rem;
+	--sidebar-account-status-color: var(--color-gray);
+
+	/*
+	* Sidebar Item
+	*/
+	--sidebar-item-radius: 2px;
+	--sidebar-item-height: 24px;
+	--sidebar-item-height-medium: 34px;
+	--sidebar-item-height-extended: 52px;
+	--sidebar-item-thumb-size: 18px;
+	--sidebar-item-thumb-size-medium: 27px;
+	--sidebar-item-thumb-size-extended: 36px;
+	--sidebar-item-text-color: var(--rc-color-primary-light);
+	--sidebar-item-background: inherit;
+	--sidebar-item-hover-background: var(--rc-color-primary-darkest);
+	--sidebar-item-active-background: var(--rc-color-primary-dark);
+	--sidebar-item-active-color: var(--sidebar-item-text-color);
+	--sidebar-item-unread-color: var(--rc-color-content);
+	--sidebar-item-unread-font-weight: 600;
+	--sidebar-item-popup-background: var(--rc-color-primary-dark);
+	--sidebar-item-user-status-size: 6px;
+	--sidebar-item-user-status-radius: 50%;
+	--sidebar-item-text-size: 0.875rem;
+
+	/*
+	* Modal - Create Channel
+	*/
+	--create-channel-gap-between-elements: 1rem;
+	--create-channel-title-color: var(--color-darkest);
+	--create-channel-title-text-size: 1.375rem;
+	--create-channel-description-color: var(--color-gray);
+	--create-channel-description-text-size: 0.875rem;
+
+	/*
+	* Toolbar
+	*/
+	--toolbar-placeholder-color: var(--color-gray);
+
+	/*
+	* Chip
+	*/
+	--chip-background: #dddddd;
+
+	/*
+	* Badge
+	*/
+	--badge-text-color: var(--color-white);
+	--badge-radius: 12px;
+	--badge-text-size: 0.75rem;
+	--badge-background: var(--rc-color-primary-dark);
+	--badge-unread-background: var(--color-blue);
+	--badge-user-mentions-background: var(--color-red);
+	--badge-group-mentions-background: var(--color-orange);
+
+	/*
+	* Message box
+	*/
+	--message-box-text-size: var(--input-font-size);
+	--message-box-placeholder-color: var(--color-gray-medium);
+	--message-box-markdown-color: var(--color-gray);
+	--message-box-markdown-hover-color: var(--color-dark);
+	--message-box-user-activity-color: var(--color-gray);
+	--message-box-user-activity-text-size: 0.75rem;
+	--message-box-user-activity-user-color: var(--color-dark);
+	--message-box-container-border-color: var(--color-gray-medium);
+	--message-box-container-border-width: var(--border);
+	--message-box-container-border-radius: var(--border-radius);
+	--message-box-editing-color: #fff5df;
+	--message-box-popover-title-text-color: var(--color-gray);
+	--message-box-popover-title-text-size: 0.75rem;
+
+	/*
+	* Header
+	*/
+	--header-height: 77px;
+	--header-padding: 16px;
+	--header-title-username-color-darker: var(--color-dark);
+	--header-title-font-size: var(--text-default-size);
+	--header-title-font-size--subtitle: var(--text-small-size);
+	--header-title-status-color: var(--color-gray);
+	--header-title-username-weight: 400;
+	--header-title-status-name-weight: 400;
+	--header-title-status-bullet-radius: var(--status-bullet-radius);
+	--header-title-status-bullet-size: var(--status-bullet-size);
+	--header-background-color: var(--color-white);
+
+	/*
+	* Flex nav
+	*/
+	--flex-nav-background: var(--color-gray-lightest);
+
+	/*
+	* Tooltip
+	*/
+	--tooltip-background: var(--color-darkest);
+	--tooltip-text-color: var(--color-white);
+	--tooltip-text-size: 0.75rem;
+	--tooltip-radius: var(--border-radius);
+
+	/*
+	* alert
+	*/
+	--alerts-padding: var(--sidebar-default-padding);
+	--alerts-padding-vertical: 10px;
+	--alerts-padding-vertical-large: 20px;
+	--alerts-background: #1d73f5;
+	--alerts-color: var(--color-white);
+	--alerts-font-size: var(--text-default-size);
+	--content-page-padding: 2.5rem;
+}
+
+//- Resets
+.color-primary-font-color,
+textarea {
+	color: var(--primary-font-color);
+}
+
+.color-info-font-color {
+	color: var(--info-font-color);
+}
+
+input,
+select,
+textarea {
+	color: var(--input-text-color);
+}
+
+.error-color {
+	color: var(--rc-color-error);
+}
+
+.js-button[aria-label="Toggle Dark Mode"] {
+	transition: filter 150ms;
+}
+
+.rcx-icon--name-darkmode {
+	height: 1em;
+	font-size: 1rem !important;
+}
+
+@media (min-width: 1372px) {
+	.sidebar__toolbar-button {
+		margin: 0 3px;
+	}
+}
+
+@keyframes highlight {
+	from {
+		background-color: hsl(216, 92%, 54%);
+	}
+}
+
+//- Reset Sidebar
+.rcx-sidebar .sidebar--custom-colors {
+  --rcx-button-colors-ghost-active-border-color: #{$dark-color-light};
+  --rcx-button-colors-ghost-active-background-color: #{$dark-color-light};
+  --rcx-button-colors-ghost-color: #{$gray-color-lighter};
+  --rcx-button-colors-ghost-border-color: transparent;
+  --rcx-button-colors-ghost-background-color: #{$dark-color-light};
+  --rcx-button-colors-ghost-hover-background-color: #{$dark-color-lighter};
+  --rcx-button-colors-ghost-hover-border-color: #{$dark-color-lighter};
+  --rcx-button-colors-ghost-hover-color: #{$gray-color-lighter};
+
+  --rcx-sidebar-item-background-color-hover: #{$dark-color-light};
+  --rcx-sidebar-item-background-color-selected: #{$dark-color-lighter};
+  // --rcx-badge-colors-ghost-background-color: #6c727a;
+  // --rcx-tag-colors-ghost-background-color: #6c727a;
+  // --rcx-color-surface: #1f2329;
+
+  --rcx-divider-color: var(--sidebar-border);
+  // --rcx-color-foreground-alternative: #f7f8fa;
+  // --rcx-color-foreground-hint: #9ea2a8;
+}
+
+.rcx-sidebar {
+  background: var(--sidebar-background) !important;
+  border-right: .0625rem solid var(--sidebar-border);
+}
+
+//- Dark Mode Variables
+body.dark-mode {
+  & {
+    /****************************** Custom Variables ******************************/
+    --primary-font-color: var(--color-gray-lightest);
+    --info-font-color: var(--color-gray-light);
+    --color-dark: #{$dark-color};
+    --message-box-background: hsla(0, 0, 100%, 0.1);
+    --header-background-color: var(--color-dark);
+    --content-background-color: var(--color-dark);
+
+    --button-outline-color: var(--color-gray-medium);
+    --button-close-color: var(--color-gray-medium);
+
+    --sidebar-border: #{$border-color};
+    --rcx-divider-color: var(--sidebar-border);
+    --rcx-button-colors-secondary-background-color: transparent;
+    --rcx-button-colors-secondary-border-color: var(--sidebar-border);
+    --rcx-button-colors-secondary-hover-background-color: transparent;
+    --rcx-button-colors-secondary-hover-border-color: #{$gray-color-lighter};
+    --rcx-button-colors-primary-disabled-border-color: #{$gray-color-darker};
+    --rcx-color-foreground-default: #{$gray-color-lightest};
+
+    --rcx-button-colors-ghost-active-border-color: #{$dark-color-light};
+    --rcx-button-colors-ghost-active-background-color: #{$dark-color-light};
+    --rcx-button-colors-ghost-color: #{$gray-color-lighter};
+    --rcx-button-colors-ghost-border-color: transparent;
+    --rcx-button-colors-ghost-background-color: #{$dark-color-light};
+    --rcx-button-colors-ghost-hover-background-color: #{$dark-color-lighter};
+    --rcx-button-colors-ghost-hover-border-color: #{$dark-color-lighter};
+    --rcx-button-colors-ghost-hover-color: #{$light-color-dark};
+
+    --rcx-input-colors-background-color: #{$dark-color};
+    --rcx-input-colors-border-color: #{$border-color-light};
+    --rcx-input-colors-active-border-color: #{$border-color-lightest};
+    --rcx-input-colors-hover-border-color: #{$border-color-lighter};
+    --rcx-input-colors-focus-border-color: #{$border-color-lightest};
+    --rcx-input-colors-focus-shadow-color: #{$shadow-color};
+
+    --rcx-button-colors-off-focus-shadow-color: #{$shadow-color};
+    --rcx-button-colors-primary-focus-shadow-color: #{$shadow-color};
+    --rcx-button-colors-off-background-color: #{$dark-color-lighter};
+    --rcx-button-colors-off-active-background-color: #{$dark-color-lighter};
+    --rcx-button-colors-off-hover-background-color: #{$dark-color-lighter};
+    --rcx-button-colors-off-focus-background-color: #{$dark-color-lighter};
+    --rcx-button-colors-off-disabled-background-color: #{$dark-color-lighter};
+    --rcx-button-colors-off-border-color: #{$border-color-lighter};
+    --rcx-button-colors-off-hover-border-color: #{$border-color-lightest};
+    --rcx-button-colors-off-disabled-border-color: #{$border-color-light};
+    --rcx-button-colors-off-disabled-color: #{$border-color-lighter};
+
+    --message-box-markdown-color: #{$gray-color-darkest};
+    --message-box-markdown-hover-color: #{$gray-color-lightest};
+
+    /* Forms - popup list */
+    --popup-list-background: var(--color-dark);
+    --popup-list-background-hover: var(--color-darkest);
+    --popup-list-selected-background: var(--color-dark);
+    --popup-list-name-color: var(--color-white);
+
+    /* Forms - tags */
+    --tags-text-color: var(--color-white);
+    --tags-background: var(--color-blue);
+
+    /* Sidebar */
+    --sidebar-background: var(--color-dark);
+
+    /* Chip */
+    --chip-background: var(--color-blue);
+
+    /* Message box */
+    --component-color: #{$border-color};
+    --message-box-user-activity-color: var(--color-gray-lightest);
+    --message-box-user-activity-user-color: var(--color-gray-lightest);
+
+    /* Header */
+    --header-title-username-color-darker: var(--color-gray-lightest);
+    --header-background-color: var(--color-darkest);
+
+    /* Popover */
+    --popover-background: var(--color-dark);
+    --popover-title-color: var(--color-white);
+    --popover-item-color: var(--color-white);
+    --popover-divider-color: #{$border-color-light};
+
+    /* Tooltip */
+    --tooltip-background: var(--color-darkest);
+    --tooltip-text-color: var(--color-white);
+
+    /* alert */
+    --alerts-background: #1d73f5;
+    --alerts-color: var(--color-white);
+
+    --message-box-editing-color: var(--rc-color-alert-message-warning-background);
+    --rc-color-alert: var(--color-dark-red);
+  }
+
+  /* Breadcrumbs discussions */
+  .rcx-room-header {
+    .rcx-tag--default {
+      background-color: unset; 
+    }
+  }
+
+  /* Attachements content */
+  .rcx-message-attachment {
+    .rcx-attachment__content {
+      .rcx-box--full {
+        color: var(--primary-font-color);
+
+        &.rcx-box--with-block-elements pre code {
+          background-color: var(--color-dark);
+            color: var(--primary-font-color);
+        }
+      }
+    }
+  }
+
+  /* Pinned messages content */
+  .rcx-css-ntpg4f {
+    color: var(--rc-color-primary) !important;
+  }
+
+  /* Message "You joined a new private conversation with" */
+  .rcx-css-dlop43 {
+    color: var(--rc-color-primary) !important;
+  }
+
+  .highlight-text {
+    background-color: var(--color-blue);
+  }
+
+  .rc-switch__text {
+    color: var(--color-white);
+  }
+
+  .rc-switch-double {
+    color: var(--color-white);
+  }
+
+  .rc-switch__button {
+    background-color: var(--color-dark);
+  }
+
+  .error-border {
+    border-color: var(--color-dark-red);
+  }
+
+  .background-component-color {
+    background-color: var(--color-dark-blue);
+  }
+
+  .upload-progress-progress {
+    background-color: var(--color-blue);
+  }
+
+  .container-bars {
+    .color-primary-action-color {
+      color: var(--color-white);
+    }
+  }
+
+  .rc-button--outline {
+    border-color: var(--button-outline-color);
+    color: var(--button-outline-color);
+  }
+  
+  .rc-button--outline.js-close,
+  .rc-button--nude.js-close {
+    border-color: var(--button-close-color);
+    color: var(--button-close-color);
+  }
+  
+  .rc-button--cancel,
+  .rc-button--danger {
+    background-color: var(--button-cancel-color);
+    border-color: var(--button-cancel-color);
+    color: var(--button-primary-text-color);
+  }
+  
+  .contextual-bar {
+    border-left: 2px solid var(--color-dark-medium);
+  }
+  
+  .contextual-bar__header {
+    border-bottom: 1px solid var(--color-dark-medium);
+  }
+  
+  .contextual-bar,
+  .contextual-bar__header,
+  .contextual-bar__content,
+  .rc-member-list__counter {
+    background: var(--color-dark);
+  }
+
+  //- Chat File List
+  .attachments__item:hover,
+  .attachments__item:active {
+    background-color: var(--color-darkest);
+  }
+
+  .attachments__content:hover,
+  .attachments__content:active {
+    color: var(--primary-font-color);
+  }
+
+  .attachments__name {
+    color: var(--color-blue);
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: var(--color-light-blue);
+    }
+  }
+
+  .rc-popover__content {
+    background-color: var(--popover-background);
+    box-shadow: 0px 0px 2px var(--color-dark-20);
+  }
+
+  .emoji-picker {
+    .filter-list {
+      padding: 0;
+    }
+
+    .filter-item {
+      border-color: $border-color-dark;
+
+      &.active {
+        border-color: $primary-color;
+      }
+    }
+  }
+
+  .rcx-room-header hr.rcx-divider {
+    border-color: $border-color;
+  }
+
+  .chat-now {
+    color: var(--color-white);
+  }
+  
+  .room-leader:hover,
+  .message-popup-title {
+    background: var(--color-dark);
+  }
+
+  figcaption.rcx-box.rcx-box--full.rcx-attachment__details {
+    background-color: var(--color-darker) !important;
+    color: var(--primary-font-color) !important;
+  }
+  
+  .rcx-css-z2kk2c {
+    color: var(--primary-font-color) !important;
+  }
+  
+  .rcx-box--with-inline-elements code,
+  .rcx-field__description code,
+  .rcx-field__error code,
+  .rcx-field__hint code{
+    background-color: var(--color-dark-100) !important;
+    color: var(--primary-font-color) !important;
+  }
+
+  .rcx-table__cell--header:after {
+    border-color: $border-color;
+  }
+
+  .rcx-pagination--divider:before {
+    background: $border-color;
+  }
+
+  //- My Account
+  .rc-form-legend,
+  .rc-form-label {
+    color: var(--primary-font-color);
+  }
+
+  .js-logout {
+    color: var(--primary-font-color);
+    border-color: var(--primary-font-color);
+  }
+
+  //- Poll App
+  .rcx-css-erwtrf {
+    color: var(--primary-font-color) !important; 
+  }
+
+  //- Channel Message
+  .rcx-avatar-stack > .rcx-avatar > .rcx-avatar__element {
+    border-color: $border-color;
+  }
+
+  .rcx-tag--secondary {
+    background: rgba($primary-color, .15);
+    border-radius: var(--border-radius);
+    padding: .25rem .4rem;
+
+    &:focus,
+    &:hover {
+      background: rgba($primary-color, .15);
+      color: $primary-color;
+      opacity: .8;
+    }
+  }
+
+  //- Main
+  .main-content {
+    .start {
+      font-weight: 900;
+    }
+
+    .rcx-button {
+      color: var(--rcx-button-colors-ghost-color) !important;
+  
+      &:not(.rcx-button--ghost) { /* Default */
+        background-color: var(--color-dark) !important;
+      }
+  
+      &:is(.rcx-button--ghost, .rcx-button):hover { /* Hovered or selected */
+        background-color: var(--color-darkest) !important;
+      }
+    }
+  
+    .rcx-button--square {
+      &:not(.rcx-button--ghost), /* Default */
+      &:is(.rcx-button--ghost, .rcx-button):hover {  /* Hovered or selected */
+        background-color: var(--color-darkest) !important;
+        border-color: transparent !important;
+      }
+      &:is(.rcx-button--ghost, .rcx-button):focus {
+        background-color: var(--color-darkest);
+        border-color: transparent !important;
+        box-shadow: 0 0 0 .1rem lighten($dark-color-lighter, 4%);
+      }
+    }
+
+    .rcx-css-15vvv6z,
+    .rcx-css-136xdpx,
+    .rcx-css-1es44sn {
+      &:active,
+      &:hover {
+        border-color: $border-color !important;
+        background-color: $bg-color !important;
+      }
+    }
+
+    //- Aside
+    .rcx-vertical-bar {
+      background: $dark-color !important;
+
+      .rcx-avatar--x332 {
+        height: 10rem;
+        width: 10rem;
+      }
+    }
+
+    aside.rcx-vertical-bar,    /* right aside (threads, search, etc.) */
+    .rcx-css-ccvr3m,                                 /* thread list message */
+    .rcx-css-1j3nsmc,                                /* thread list message */
+    .rcx-css-1bmadou,                                /* thread list header */
+    .rcx-css-1yhzjdg                                 /* thread list search bar */
+    {
+      --rcx-color-neutral-300: #{$border-color};
+      border-color: $border-color !important;
+    }
+
+    .rcx-vertical-bar {
+      .rcx-tag {
+        background: $dark-color-lighter;
+        color: $gray-color-light;
+      }
+
+      .rcx-css-1e1wru6 {
+        color: $gray-color-light;
+      }
+    }
+
+    button.rcx-contextual-message__follow + div.rcx-box--full {
+      background: $primary-color !important;
+    }
+
+    /* Files List */
+    .rcx-css-18t0quo 
+    {
+      &.hover,
+      &:hover {
+        background: $bg-color-dark;
+      }
+
+      &.focus,
+      &:focus {
+        border-color: $border-color;
+      }
+    }
+
+    /* Settings List */
+    .rcx-css-nbqasl {
+      padding: 1.5rem !important;
+    }
+
+    .rcx-accordion-item__bar {
+      border-top-color: $border-color;
+
+      &:focus {
+        box-shadow: 0 0 0 .25rem lighten($dark-color-lighter, 4%);
+      }
+
+      &[tabindex] {
+        &.hover,
+        &:hover {
+          background: $bg-color-dark;
+        }
+
+        &.focus,
+        &:focus {
+          border-color: $border-color;
+        }
+      }
+    }
+  }
+  
+  //- Messages
+  .message {
+    &:hover,
+    &:focus,
+    &.active {
+      background: $dark-color-light;
+    }
+
+    &.editing {
+      background: rgba($primary-color, .15);
+    }
+
+    &.first-unread .body:after {
+      background-color: var(--header-background-color);
+    }
+
+    &.new-day::before {
+      background: $dark-color;
+      color: $gray-color-light;
+    }
+
+    .title {
+      margin-bottom: .25rem;
+
+      .is-bot,
+      .role-tag {
+        background: $dark-color-lighter;
+        color: $gray-color-light;
+      }
+    }
+
+    .time {
+      color: $gray-color;
+    }
+
+    .rcx-box--full {
+      color: $gray-color;
+
+      blockquote {
+        background: transparent !important;
+        border: 0 !important;
+        border-left: .2rem solid $border-color-light !important;
+        border-radius: 0 !important;
+        padding-top: .5rem !important;
+      }
+
+      picture {
+        background: transparent;
+        border-color: $dark-color-lighter !important;
+        border-radius: $border-radius !important;
+  
+        img {
+          border-radius: $border-radius;
+        }
+      }
+
+      code {
+        background: $bg-color !important;
+        border-color: $border-color-light !important;
+        color: $gray-color;
+      }
+    }
+
+    .message-oembed {
+      background: transparent !important;
+      border: 0 !important;
+      border-left: .2rem solid $border-color-light !important;
+      margin-top: .25rem;
+
+      img {
+        border-radius: $border-radius;
+      }
+    }
+
+    code.code-colors {
+      background: $bg-color !important;
+      border-color: $border-color-light !important;
+      color: $gray-color;
+      line-height: 1;
+
+      .hljs-doctag,
+      .hljs-keyword,
+      .hljs-meta .hljs-keyword,
+      .hljs-template-tag,
+      .hljs-template-variable,
+      .hljs-type,
+      .hljs-variable {
+        color: #ff7b72;
+      }
+  
+      .hljs-attr,
+      .hljs-attribute,
+      .hljs-literal,
+      .hljs-meta,
+      .hljs-number,
+      .hljs-operator,
+      .hljs-variable,
+      .hljs-selector-attr,
+      .hljs-selector-class,
+      .hljs-selector-id {
+        color: #79c0ff;
+      }
+  
+      .hljs-title {
+        color: #d2a8ff;
+      }
+  
+      .hljs-regexp,
+      .hljs-string,
+      .hljs-meta .hljs-string {
+        color: #a5d6ff;
+      }
+  
+      .hljs-comment,
+      .hljs-code,
+      .hljs-formula {
+        color: #8b949e;
+      }
+
+      .hljs-name,
+      .hljs-quote,
+      .hljs-selector-tag,
+      .hljs-selector-pseudo {
+        color: #7ee787;
+      }
+    }
+
+    .mention-link {
+      background: rgba($primary-color, .15) !important;
+      color: $primary-color !important;
+      padding: .1rem .2rem;
+    }
+
+    .reactions > li {
+      background: $dark-color-lighter;
+      border-color: $dark-color-lighter;
+      color: $gray-color-light;
+
+      &:active,
+      &:focus,
+      &:hover {
+        background: $dark-color-lighter;
+        border-color: lighten($dark-color-lighter, 4%);
+      }
+    }
+
+    .background-transparent-darker-before::before {
+      background: transparent;
+    }
+
+    .message-actions,
+    .rc-member-list__counter {
+      background: $dark-color;
+      border-color: $dark-color-lighter;
+      color: $gray-color-light;
+
+      .message-actions__button:hover,
+      .message-actions__menu:hover {
+        background: $dark-color-lighter;
+      }
+    }
+  }
+
+  //- Channel Title
+  .rcx-room-header .rcx-css-ps0pgs, 
+  .rcx-room-header .rcx-box:not(.rcx-button-group):not(.rcx-button):not(.rcx-css-1fgkscl):not(.rcx-css-4pvxx3),
+  .rcx-vertical-bar .rcx-box:not(.rcx-button-group):not(.rcx-button):not(.rcx-css-1fgkscl):not(.rcx-css-4pvxx3) {
+    color: $light-color-dark !important;
+  }
+
+  //- Footer
+  .footer {
+    .rc-message-box__container {
+      background: transparent;
+      border-color: $border-color;
+    }
+
+    .rc-message-box .reply-preview {
+      background: $dark-color;
+    }
+  }
+
+  //- Admin 
+  .page-list a:not(.rc-button),
+  .page-settings a:not(.rc-button) {
+    color: var(--primary-font-color);
+  }
+  
+  .simplebar-content > .rcx-css-fr02gd { /* main content */
+    background-color: var(--color-dark);
+  }
+  
+  .rcx-css-txktj6 { /* Account settings page background */
+    background-color: var(--color-dark) !important;
+  }
+  
+  .rcx-css-1wm5na { /* Account settings page header title */
+    color: var(--primary-font-color) !important;
+  }
+  
+  .rc-scrollbars-container { /* Panels sidebar */
+    background-color: var(--sidebar-background);
+  }
+  
+  .rcx-css-15hfnte {  /* Panels sidebar header */
+    background-color: var(--color-dark);
+
+    .rcx-css-4pvxx3:hover { /* Panels sidebar button (with cross icon) hovered */
+      color: var(--rc-color-primary-dark) !important;
+    }
+  }
+  
+  .rcx-css-10ij0kz .rcx-box { /* Panels sidebar header text and button (with cross icon) */
+    color: var(--primary-font-color) !important;
+  }
+  
+  .rcx-css-1l00c5f,
+  .rcx-css-1ky5rco { /* Panels sidebar item */
+      color: var(--rcx-sidebar-item-color,var(--rcx-color-foreground-hint,#9ea2a8)) !important;
+  }
+  
+  .rcx-css-1l00c5f.active { /* Panels sidebar item selected */
+      background-color: rgba(108, 114, 122, 0.3);
+  }
+  
+  .rcx-css-1l00c5f:hover, .rcx-css-1l00c5f:focus, .rcx-css-1l00c5f.active:focus, .rcx-css-1l00c5f.active:hover { /* Panels sidebar item hovered */
+      background-color: var(--color-darkest);
+  }
+  
+  .rcx-css-kyq2rf { /* Admin panel info & stats (Deployment, License, Usage) */
+    background-color: var(--color-dark) !important;
+  }
+  
+  .rcx-css-61di5s { /* Admin panel info & stats (Deployment, License, Usage) */
+    color: var(--color-gray) !important;
+  }
+  
+  .rcx-select__item {
+    color: var(--primary-font-color) !important;
+  }
+  
+  .sidebar-flex__header,
+  .sidebar-light {
+    background: var(--color-dark);
+  }
+
+  .rcx-accordion-item__title,
+  .rcx-label__text,
+  .rcx-field__label {
+    color: var(--color-white);
+  }
+
+  .sidebar-flex__search .rc-input__element {
+    color: var(--color-dark);
+  }
+
+  .rcx-table__cell {
+    color: var(--color-gray) !important;
+    background-color: var(--color-dark);
+  }
+
+  .rcx-table__cell--header {
+    color: var(--color-gray-lightest) !important;
+  }
+
+  .rcx-table__cell--align-end {
+    color: var(--color-gray);
+    background-color: var(--color-gray);
+  }
+
+  .rcx-css-18up6l1,
+  .rcx-css-zvbm6,
+  .rcx-css-n6qrb5 { /* Table cells content text*/
+    color: var(--primary-font-color) !important;
+  }
+
+  .admin-table-row {
+    background-color: hsl(219, 16%, 25%);
+  }
+
+  .sidebar-light .sidebar-item {
+    color: inherit;
+  }
+
+  .admin-table-row:nth-child(even) {
+    background-color: hsl(219, 15%, 33%);
+  }
+
+  .permissions-manager .permission-grid .id-styler {
+    color: var(--info-font-color);
+  }
+
+  .rcx-box--text-style-h1,
+  .rcx-subtitle,
+  .rcx-box--text-color-default,
+  .rcx-box--text-color-info {
+    color: var(--color-gray-lightest);
+  }
+
+  .permissions-manager .permission-grid .role-name {
+    background: var(--color-dark);
+  }
+
+  .rc-apps-marketplace .rc-table-content tbody .rc-table-tr:not(.table-no-click):not(.table-no-pointer):hover,
+  .rc-apps-section .rc-table-content tbody .rc-table-tr:not(.table-no-click):not(.table-no-pointer):hover {
+    background-color: var(--color-dark);
+  }
+
+  .rc-apps-marketplace .rc-table-content .rc-table-info .rc-apps-categories .rc-apps-category,
+  .rc-apps-section .rc-table-content .rc-table-info .rc-apps-categories .rc-apps-category {
+    color: var(--primary-font-color);
+    background-color: var(--color-dark-medium);
+  }
+  
+  .rcx-banner {
+    background-color: var(--color-dark-medium);
+    color: var(--info-font-color) !important;
+  }
+  
+  .rcx-banner__close-button .rcx-button:hover {
+      background-color: var(--color-dark-light);
+      border: none;
+  }
+  
+  .mail-messages__instructions {
+    background-color: var(--color-dark);
+  }
+  
+  .rcx-table__cell--align-end {
+    color: var(--info-font-color) !important;
+  background-color: var(--color-dark-medium) !important;
+  }
+  
+  .rcx-table__cell--align-start {
+    color: var(--info-font-color) !important;
+    background-color: var(--color-dark-medium) !important;
+  }
+  
+  .rcx-field__description code {
+    background-color: var(--color-dark);
+  }
+  
+  .table-fake-th {
+    color: var(--info-font-color);
+  }
+  
+  .setting-action {
+    border: var(--button-border-width) solid var(--info-font-color);
+    color: var(--info-font-color);
+  }
+
+  .CodeMirror {
+    background-color: var(--color-gray-light);
+  }
+  
+  .CodeMirror-gutter {
+    background-color: var(--color-dark);
+  }
+
+  //- Login
+  main#rocket-chat {
+    background-color: var(--color-dark);
+  }
+  
+  section.full-page.color-tertiary-font-color {
+    background-color: var(--color-dark);
+  }
+  
+  .rc-button.rc-button--nude.forgot-password,
+  .rc-button.rc-button--nude.back-to-login,
+  .rc-button.rc-button--nude.register,
+  .rc-button.rc-button--nude i.icon-cancel,
+  .register-link-replacement {
+    color: var(--color-white);
+  }
+  
+  #login-card {
+    background-color: var(--color-darkest);
+  }
+  
+  //- Components
+  //- Buttons
+  .rcx-css-136xdpx {
+    background: var(--color-dark);
+  }
+  
+  .rcx-button {
+    color: var(--info-font-color);
+  }
+  
+  .rcx-button--ghost:not(.rcx-button--square):hover {
+    color: var(--color-dark) !important;
+  }
+  
+  .rcx-button--primary {
+    color: var(--info-font-color);
+    background-color: #095ad2;
+  }
+  
+  .rcx-button--primary:disabled {
+    opacity: .6;
+  }
+  
+  .rcx-button--danger {
+    color: var(--rcx-button-colors-secondary-danger-color,var(--rcx-color-danger-500,#f5455c));
+  }
+
+  //- Forms
+  .rcx-check-box.is-focused,
+  .rcx-check-box__input:checked+.rcx-check-box__fake,
+  .rcx-check-box.is-focused,
+  .rcx-check-box__input:indeterminate+.rcx-check-box__fake,
+  .rcx-check-box__input:checked:focus+.rcx-check-box__fake,
+  .rcx-check-box__input:indeterminate:focus+.rcx-check-box__fake,
+  .rcx-radio-button.is-focused
+  .rcx-radio-button__input:checked+.rcx-radio-button__fake,
+  .rcx-radio-button__input:checked:focus+.rcx-radio-button__fake,
+  .rcx-toggle-switch.is-focused
+  .rcx-toggle-switch__input:checked+.rcx-toggle-switch__fake,
+  .rcx-toggle-switch__input:checked:focus+.rcx-toggle-switch__fake {
+    background-color: $primary-color !important;
+  }
+
+  .rc-input__element {
+    background-color: $dark-color-light;
+    border-color: $border-color;
+    color: $gray-color-lightest !important;
+
+    &:focus,
+    &:hover {
+      background: $dark-color-lighter;
+      border-color: $border-color-light;
+    }
+
+    &:disabled {
+      opacity: .75;
+    }
+  }
+
+  //- Dropdown
+  select {
+    background-color: var(--color-dark);
+
+    option {
+      color: var(--color-white);
+    }
+  }
+
+  .rcx-select {
+    background-color: $dark-color !important;
+  }
+
+  .rcx-options {
+    & > .rcx-tile {
+      background: $dark-color !important;
+    }
+
+    .rcx-option {
+      background: $dark-color !important;
+      color: $gray-color-light !important;
+
+      &:hover {
+        background: $dark-color-light !important;
+      }
+    }
+
+    .rcx-option--focus,
+    .rcx-option--selected {
+      background: $dark-color-light !important;
+    }
+  }
+
+  .rc-popover__content {
+    .rc-popover__item {
+      &:focus,
+      &:hover {
+        color: $gray-color-light;
+      }
+    }
+
+    .rc-popover__divider {
+      margin: .5rem 0;
+    }
+
+    .rcx-option:hover {
+      background: $dark-color-light !important;
+    }
+  }
+
+  //- User Card 
+  .rcx-user-card {
+    background-color: var(--color-dark) !important;
+
+    .rcx-button:not(.rcx-css-ue04py) {
+      background-color: var(--color-dark-medium);
+      border: none;
+    }
+
+    .rcx-button:hover {
+      background-color: var(--color-dark-light);
+      border: none;
+    }
+  }
+
+  //- Modals
+  .rcx-modal__inner,
+  .rcx-modal__footer,
+  .rc-modal,
+  .rc-modal__footer {
+    background: $dark-color;
+  }
+
+  .rc-modal__content,
+  .rc-modal__header,
+  .rcx-modal__content,
+  .rcx-modal__inner,
+  .rcx-modal__header,
+  .rcx-modal__title,
+  .rcx-label {
+    color: var(--color-white);
+  }
+
+  //- Scrollbars
+  .main-content {
+    *::-webkit-scrollbar {
+      background-color: rgba($border-color, .25);
+    }
+    *::-webkit-scrollbar-thumb {
+      background-color: rgba($border-color-light, .25);
+    }
+    *::-webkit-scrollbar-corner {
+      background-color: rgba($border-color, .25);
+    }
+  }
+  
+  *::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: $border-color;
+  }
+  
+  /* Firefox does the dimming on hover automatically. We emulate it for Webkit-based browsers. */
+  *::-webkit-scrollbar-thumb:hover {
+    background-color: $border-color-light;
+  }
+  
+  *::-webkit-scrollbar-thumb:active {
+    background-color: $border-color-lighter;
+  }
+}
