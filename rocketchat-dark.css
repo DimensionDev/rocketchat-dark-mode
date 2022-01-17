@@ -904,7 +904,7 @@ body.dark-mode .message.new-day::before {
 }
 
 body.dark-mode .message a {
-  --link-font-color: #2563eb;
+  color: #2563eb;
 }
 
 body.dark-mode .message .title {

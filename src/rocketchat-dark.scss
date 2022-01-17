@@ -782,7 +782,7 @@ body.dark-mode {
     }
 
     a {
-      --link-font-color: #{$primary-color};
+      color: $primary-color;
     }
 
     .title {
