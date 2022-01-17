@@ -903,6 +903,10 @@ body.dark-mode .message.new-day::before {
   color: #a5adb8;
 }
 
+body.dark-mode .message a {
+  --link-font-color: #2563eb;
+}
+
 body.dark-mode .message .title {
   margin-bottom: .25rem;
 }
@@ -1055,6 +1059,22 @@ body.dark-mode .rcx-vertical-bar .rcx-box:not(.rcx-button-group):not(.rcx-button
 body.dark-mode .footer .rc-message-box__container {
   background: transparent;
   border-color: #23272c;
+}
+
+body.dark-mode .footer .rc-message-box__textarea {
+  color: #fafafa;
+}
+
+body.dark-mode .footer .rc-message-box__textarea:-ms-input-placeholder {
+  color: #8994a2;
+}
+
+body.dark-mode .footer .rc-message-box__textarea::-ms-input-placeholder {
+  color: #8994a2;
+}
+
+body.dark-mode .footer .rc-message-box__textarea::placeholder {
+  color: #8994a2;
 }
 
 body.dark-mode .footer .rc-message-box .reply-preview {

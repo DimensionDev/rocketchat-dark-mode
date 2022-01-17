@@ -781,6 +781,10 @@ body.dark-mode {
       color: $gray-color-light;
     }
 
+    a {
+      --link-font-color: #{$primary-color};
+    }
+
     .title {
       margin-bottom: .25rem;
 
@@ -935,6 +939,14 @@ body.dark-mode {
     .rc-message-box__container {
       background: transparent;
       border-color: $border-color;
+    }
+
+    .rc-message-box__textarea {
+      color: $light-color-dark;
+
+      &::placeholder {
+        color: $gray-color-darkest;
+      }
     }
 
     .rc-message-box .reply-preview {
