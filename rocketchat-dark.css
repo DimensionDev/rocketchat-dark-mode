@@ -698,6 +698,13 @@ body.dark-mode .rc-popover__content {
   box-shadow: 0 0 2px var(--color-dark-20);
 }
 
+body.dark-mode .emoji.big {
+  height: 8rem;
+  max-height: 8rem;
+  max-width: 8rem;
+  width: 8rem;
+}
+
 body.dark-mode .emoji-picker .filter-list {
   padding: 0;
 }
@@ -1056,28 +1063,28 @@ body.dark-mode .rcx-vertical-bar .rcx-box:not(.rcx-button-group):not(.rcx-button
   color: #fafafa !important;
 }
 
-body.dark-mode .footer .rc-message-box__container {
+body.dark-mode .rc-message-box__container {
   background: transparent;
   border-color: #23272c;
 }
 
-body.dark-mode .footer .rc-message-box__textarea {
+body.dark-mode .rc-message-box__textarea {
   color: #fafafa;
 }
 
-body.dark-mode .footer .rc-message-box__textarea:-ms-input-placeholder {
+body.dark-mode .rc-message-box__textarea:-ms-input-placeholder {
   color: #8994a2;
 }
 
-body.dark-mode .footer .rc-message-box__textarea::-ms-input-placeholder {
+body.dark-mode .rc-message-box__textarea::-ms-input-placeholder {
   color: #8994a2;
 }
 
-body.dark-mode .footer .rc-message-box__textarea::placeholder {
+body.dark-mode .rc-message-box__textarea::placeholder {
   color: #8994a2;
 }
 
-body.dark-mode .footer .rc-message-box .reply-preview {
+body.dark-mode .rc-message-box .reply-preview {
   background: #1a1d21;
 }
 
@@ -1282,6 +1289,7 @@ body.dark-mode #login-card {
 
 body.dark-mode .rcx-css-136xdpx {
   background: var(--color-dark);
+  border-bottom-color: #23272c !important;
 }
 
 body.dark-mode .rcx-button {
@@ -1346,26 +1354,27 @@ body.dark-mode .rcx-select {
   background-color: #1a1d21 !important;
 }
 
-body.dark-mode .rcx-options > .rcx-tile {
+body.dark-mode .rcx-tile {
   background: #1a1d21 !important;
 }
 
-body.dark-mode .rcx-options .rcx-option {
+body.dark-mode .rcx-option {
   background: #1a1d21 !important;
   color: #a5adb8 !important;
 }
 
-body.dark-mode .rcx-options .rcx-option:hover {
+body.dark-mode .rcx-option:hover {
   background: #1e2227 !important;
 }
 
-body.dark-mode .rcx-options .rcx-option--focus,
-body.dark-mode .rcx-options .rcx-option--selected {
+body.dark-mode .rcx-option--focus,
+body.dark-mode .rcx-option--selected {
   background: #1e2227 !important;
 }
 
 body.dark-mode .rc-popover__content .rc-popover__item:focus,
 body.dark-mode .rc-popover__content .rc-popover__item:hover {
+  background: #1e2227 !important;
   color: #a5adb8;
 }
 
@@ -1375,6 +1384,12 @@ body.dark-mode .rc-popover__content .rc-popover__divider {
 
 body.dark-mode .rc-popover__content .rcx-option:hover {
   background: #1e2227 !important;
+}
+
+body.dark-mode .rcx-table__row--action:focus,
+body.dark-mode .rcx-table__row--action:hover {
+  background: #1e2227 !important;
+  color: #a5adb8;
 }
 
 body.dark-mode .rcx-user-card {
