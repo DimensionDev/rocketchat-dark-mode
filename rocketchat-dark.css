@@ -1084,6 +1084,19 @@ body.dark-mode .rc-message-box__textarea::placeholder {
   color: #8994a2;
 }
 
+body.dark-mode .rcx-message {
+  background: #1a1d21 !important;
+}
+
+body.dark-mode .rcx-message:focus,
+body.dark-mode .rcx-message:hover {
+  background: #23272c !important;
+}
+
+body.dark-mode .rcx-message-body {
+  color: #fafafa;
+}
+
 body.dark-mode .rc-message-box .reply-preview {
   background: #1a1d21;
 }
@@ -1099,6 +1112,23 @@ body.dark-mode .simplebar-content > .rcx-css-fr02gd {
 
 body.dark-mode .rcx-css-txktj6 {
   /* Account settings page background */ background-color: var(--color-dark) !important;
+}
+
+body.dark-mode .rcx-css-10nb3ed {
+  background-color: #1e2227 !important;
+}
+
+body.dark-mode .rcx-css-1of9j10 {
+  background-color: #1e2227 !important;
+}
+
+body.dark-mode .rcx-css-pkfs6h:focus,
+body.dark-mode .rcx-css-pkfs6h:hover {
+  background-color: #1e2227 !important;
+}
+
+body.dark-mode .rcx-css-pkfs6h.active {
+  background-color: #23272c !important;
 }
 
 body.dark-mode .rcx-css-1wm5na {
@@ -1297,7 +1327,7 @@ body.dark-mode .rcx-button {
 }
 
 body.dark-mode .rcx-button--ghost:not(.rcx-button--square):hover {
-  color: var(--color-dark) !important;
+  color: #fafafa !important;
 }
 
 body.dark-mode .rcx-button--primary {
@@ -1350,6 +1380,10 @@ body.dark-mode select option {
   color: var(--color-white);
 }
 
+body.dark-mode .rcx-input-box {
+  color: #fafafa !important;
+}
+
 body.dark-mode .rcx-select {
   background-color: #1a1d21 !important;
 }
@@ -1372,6 +1406,20 @@ body.dark-mode .rcx-option--selected {
   background: #1e2227 !important;
 }
 
+body.dark-mode .rcx-css-jve35a {
+  border-bottom-color: #23272c !important;
+}
+
+body.dark-mode .rcx-css-jve35a:focus,
+body.dark-mode .rcx-css-jve35a:hover {
+  background: #23272c !important;
+}
+
+body.dark-mode .rcx-css-jve35a:focus .rcx-message,
+body.dark-mode .rcx-css-jve35a:hover .rcx-message {
+  background: #23272c !important;
+}
+
 body.dark-mode .rc-popover__content .rc-popover__item:focus,
 body.dark-mode .rc-popover__content .rc-popover__item:hover {
   background: #1e2227 !important;
@@ -1390,6 +1438,11 @@ body.dark-mode .rcx-table__row--action:focus,
 body.dark-mode .rcx-table__row--action:hover {
   background: #1e2227 !important;
   color: #a5adb8;
+}
+
+body.dark-mode .rcx-table__row--action:focus .rcx-table__cell,
+body.dark-mode .rcx-table__row--action:hover .rcx-table__cell {
+  background: #1e2227 !important;
 }
 
 body.dark-mode .rcx-user-card {

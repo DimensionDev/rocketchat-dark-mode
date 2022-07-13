@@ -957,6 +957,19 @@ body.dark-mode {
     }
   }
 
+  .rcx-message {
+    background: $dark-color !important;
+
+    &:focus,
+    &:hover {
+      background: $dark-color-lighter !important;
+    }
+  }
+
+  .rcx-message-body {
+    color: $light-color-dark;
+  }
+
   .rc-message-box .reply-preview {
     background: $dark-color;
   }
@@ -973,6 +986,25 @@ body.dark-mode {
   
   .rcx-css-txktj6 { /* Account settings page background */
     background-color: var(--color-dark) !important;
+  }
+
+  .rcx-css-10nb3ed {
+    background-color: $dark-color-light !important;
+  }
+
+  .rcx-css-1of9j10 {
+    background-color: $dark-color-light !important;
+  }
+
+  .rcx-css-pkfs6h {
+    &:focus,
+    &:hover {
+      background-color: $dark-color-light !important;
+    }
+
+    &.active {
+      background-color: $dark-color-lighter !important;
+    }
   }
   
   .rcx-css-1wm5na { /* Account settings page header title */
@@ -1171,7 +1203,7 @@ body.dark-mode {
   }
   
   .rcx-button--ghost:not(.rcx-button--square):hover {
-    color: var(--color-dark) !important;
+    color: $light-color-dark !important;
   }
   
   .rcx-button--primary {
@@ -1228,6 +1260,10 @@ body.dark-mode {
     }
   }
 
+  .rcx-input-box {
+    color: $light-color-dark !important;
+  }
+
   .rcx-select {
     background-color: $dark-color !important;
   }
@@ -1248,6 +1284,19 @@ body.dark-mode {
   .rcx-option--focus,
   .rcx-option--selected {
     background: $dark-color-light !important;
+  }
+
+  .rcx-css-jve35a {
+    border-bottom-color: $border-color !important;
+
+    &:focus,
+    &:hover {
+      background: $dark-color-lighter !important;
+
+      .rcx-message {
+        background: $dark-color-lighter !important;
+      }
+    }
   }
 
   .rc-popover__content {
@@ -1271,8 +1320,12 @@ body.dark-mode {
   .rcx-table__row--action {
     &:focus,
     &:hover {
-      background: #1e2227 !important;
+      background: $dark-color-light !important;
       color: $gray-color-light;
+
+      .rcx-table__cell {
+        background: $dark-color-light !important;
+      }
     }
   }
 
