@@ -893,46 +893,65 @@ body.dark-mode .main-content .rcx-accordion-item__bar[tabindex]:focus {
 
 body.dark-mode .message:hover,
 body.dark-mode .message:focus,
-body.dark-mode .message.active {
+body.dark-mode .message.active,
+body.dark-mode .rcx-message:hover,
+body.dark-mode .rcx-message:focus,
+body.dark-mode .rcx-message.active {
   background: #1e2227;
 }
 
-body.dark-mode .message.editing {
+body.dark-mode .message.editing,
+body.dark-mode .rcx-message.editing {
   background: rgba(37, 99, 235, .15);
 }
 
-body.dark-mode .message.first-unread .body:after {
+body.dark-mode .message.first-unread .body:after,
+body.dark-mode .rcx-message.first-unread .body:after {
   background-color: var(--header-background-color);
 }
 
-body.dark-mode .message.new-day::before {
+body.dark-mode .message.new-day::before,
+body.dark-mode .rcx-message.new-day::before {
   background: #1a1d21;
   color: #a5adb8;
 }
 
-body.dark-mode .message a {
+body.dark-mode .message a,
+body.dark-mode .rcx-message a {
   color: #2563eb;
 }
 
-body.dark-mode .message .title {
+body.dark-mode .message .title,
+body.dark-mode .rcx-message .title {
   margin-bottom: .25rem;
 }
 
 body.dark-mode .message .title .is-bot,
-body.dark-mode .message .title .role-tag {
+body.dark-mode .message .title .role-tag,
+body.dark-mode .rcx-message .title .is-bot,
+body.dark-mode .rcx-message .title .role-tag {
   background: #23272c;
   color: #a5adb8;
 }
 
-body.dark-mode .message .time {
+body.dark-mode .message .rcx-message-header__roles .rcx-message-header__role,
+body.dark-mode .rcx-message .rcx-message-header__roles .rcx-message-header__role {
+  background: #23272c;
+  color: #a5adb8;
+}
+
+body.dark-mode .message .time,
+body.dark-mode .rcx-message .time {
   color: #a0a8b4;
 }
 
-body.dark-mode .message .rcx-box--full {
+body.dark-mode .message .rcx-box--full,
+body.dark-mode .rcx-message .rcx-box--full {
   color: #a0a8b4;
 }
 
-body.dark-mode .message .rcx-box--full blockquote {
+body.dark-mode .message .rcx-box--full blockquote,
+body.dark-mode .rcx-message .rcx-box--full blockquote {
   background: transparent !important;
   border: 0 !important;
   border-left: .2rem solid #2a2f35 !important;
@@ -940,34 +959,45 @@ body.dark-mode .message .rcx-box--full blockquote {
   padding-top: .5rem !important;
 }
 
-body.dark-mode .message .rcx-box--full picture {
+body.dark-mode .message .rcx-box--full blockquote .rcx-css-zrca2q,
+body.dark-mode .rcx-message .rcx-box--full blockquote .rcx-css-zrca2q {
+  border-left: .2rem solid #2a2f35 !important;
+}
+
+body.dark-mode .message .rcx-box--full picture,
+body.dark-mode .rcx-message .rcx-box--full picture {
   background: transparent;
   border-color: #23272c !important;
   border-radius: .25rem !important;
 }
 
-body.dark-mode .message .rcx-box--full picture img {
+body.dark-mode .message .rcx-box--full picture img,
+body.dark-mode .rcx-message .rcx-box--full picture img {
   border-radius: .25rem;
 }
 
-body.dark-mode .message .rcx-box--full code {
+body.dark-mode .message .rcx-box--full code,
+body.dark-mode .rcx-message .rcx-box--full code {
   background: #252a2f !important;
   border-color: #2a2f35 !important;
   color: #a0a8b4;
 }
 
-body.dark-mode .message .message-oembed {
+body.dark-mode .message .message-oembed,
+body.dark-mode .rcx-message .message-oembed {
   background: transparent !important;
   border: 0 !important;
   border-left: .2rem solid #2a2f35 !important;
   margin-top: .25rem;
 }
 
-body.dark-mode .message .message-oembed img {
+body.dark-mode .message .message-oembed img,
+body.dark-mode .rcx-message .message-oembed img {
   border-radius: .25rem;
 }
 
-body.dark-mode .message code.code-colors {
+body.dark-mode .message code.code-colors,
+body.dark-mode .rcx-message code.code-colors {
   background: #252a2f !important;
   border-color: #2a2f35 !important;
   color: #a0a8b4;
@@ -980,7 +1010,14 @@ body.dark-mode .message code.code-colors .hljs-meta .hljs-keyword,
 body.dark-mode .message code.code-colors .hljs-template-tag,
 body.dark-mode .message code.code-colors .hljs-template-variable,
 body.dark-mode .message code.code-colors .hljs-type,
-body.dark-mode .message code.code-colors .hljs-variable {
+body.dark-mode .message code.code-colors .hljs-variable,
+body.dark-mode .rcx-message code.code-colors .hljs-doctag,
+body.dark-mode .rcx-message code.code-colors .hljs-keyword,
+body.dark-mode .rcx-message code.code-colors .hljs-meta .hljs-keyword,
+body.dark-mode .rcx-message code.code-colors .hljs-template-tag,
+body.dark-mode .rcx-message code.code-colors .hljs-template-variable,
+body.dark-mode .rcx-message code.code-colors .hljs-type,
+body.dark-mode .rcx-message code.code-colors .hljs-variable {
   color: #ff7b72;
 }
 
@@ -993,40 +1030,65 @@ body.dark-mode .message code.code-colors .hljs-operator,
 body.dark-mode .message code.code-colors .hljs-variable,
 body.dark-mode .message code.code-colors .hljs-selector-attr,
 body.dark-mode .message code.code-colors .hljs-selector-class,
-body.dark-mode .message code.code-colors .hljs-selector-id {
+body.dark-mode .message code.code-colors .hljs-selector-id,
+body.dark-mode .rcx-message code.code-colors .hljs-attr,
+body.dark-mode .rcx-message code.code-colors .hljs-attribute,
+body.dark-mode .rcx-message code.code-colors .hljs-literal,
+body.dark-mode .rcx-message code.code-colors .hljs-meta,
+body.dark-mode .rcx-message code.code-colors .hljs-number,
+body.dark-mode .rcx-message code.code-colors .hljs-operator,
+body.dark-mode .rcx-message code.code-colors .hljs-variable,
+body.dark-mode .rcx-message code.code-colors .hljs-selector-attr,
+body.dark-mode .rcx-message code.code-colors .hljs-selector-class,
+body.dark-mode .rcx-message code.code-colors .hljs-selector-id {
   color: #79c0ff;
 }
 
-body.dark-mode .message code.code-colors .hljs-title {
+body.dark-mode .message code.code-colors .hljs-title,
+body.dark-mode .rcx-message code.code-colors .hljs-title {
   color: #d2a8ff;
 }
 
 body.dark-mode .message code.code-colors .hljs-regexp,
 body.dark-mode .message code.code-colors .hljs-string,
-body.dark-mode .message code.code-colors .hljs-meta .hljs-string {
+body.dark-mode .message code.code-colors .hljs-meta .hljs-string,
+body.dark-mode .rcx-message code.code-colors .hljs-regexp,
+body.dark-mode .rcx-message code.code-colors .hljs-string,
+body.dark-mode .rcx-message code.code-colors .hljs-meta .hljs-string {
   color: #a5d6ff;
 }
 
 body.dark-mode .message code.code-colors .hljs-comment,
 body.dark-mode .message code.code-colors .hljs-code,
-body.dark-mode .message code.code-colors .hljs-formula {
+body.dark-mode .message code.code-colors .hljs-formula,
+body.dark-mode .rcx-message code.code-colors .hljs-comment,
+body.dark-mode .rcx-message code.code-colors .hljs-code,
+body.dark-mode .rcx-message code.code-colors .hljs-formula {
   color: #8b949e;
 }
 
 body.dark-mode .message code.code-colors .hljs-name,
 body.dark-mode .message code.code-colors .hljs-quote,
 body.dark-mode .message code.code-colors .hljs-selector-tag,
-body.dark-mode .message code.code-colors .hljs-selector-pseudo {
+body.dark-mode .message code.code-colors .hljs-selector-pseudo,
+body.dark-mode .rcx-message code.code-colors .hljs-name,
+body.dark-mode .rcx-message code.code-colors .hljs-quote,
+body.dark-mode .rcx-message code.code-colors .hljs-selector-tag,
+body.dark-mode .rcx-message code.code-colors .hljs-selector-pseudo {
   color: #7ee787;
 }
 
-body.dark-mode .message .mention-link {
+body.dark-mode .message .mention-link,
+body.dark-mode .rcx-message .mention-link {
   background: rgba(37, 99, 235, .15) !important;
   color: #2563eb !important;
   padding: .1rem .2rem;
 }
 
-body.dark-mode .message .reactions > li {
+body.dark-mode .message .reactions > li,
+body.dark-mode .message .rcx-message-reactions__reaction,
+body.dark-mode .rcx-message .reactions > li,
+body.dark-mode .rcx-message .rcx-message-reactions__reaction {
   background: #23272c;
   border-color: #23272c;
   color: #a5adb8;
@@ -1034,17 +1096,29 @@ body.dark-mode .message .reactions > li {
 
 body.dark-mode .message .reactions > li:active,
 body.dark-mode .message .reactions > li:focus,
-body.dark-mode .message .reactions > li:hover {
+body.dark-mode .message .reactions > li:hover,
+body.dark-mode .message .rcx-message-reactions__reaction:active,
+body.dark-mode .message .rcx-message-reactions__reaction:focus,
+body.dark-mode .message .rcx-message-reactions__reaction:hover,
+body.dark-mode .rcx-message .reactions > li:active,
+body.dark-mode .rcx-message .reactions > li:focus,
+body.dark-mode .rcx-message .reactions > li:hover,
+body.dark-mode .rcx-message .rcx-message-reactions__reaction:active,
+body.dark-mode .rcx-message .rcx-message-reactions__reaction:focus,
+body.dark-mode .rcx-message .rcx-message-reactions__reaction:hover {
   background: #23272c;
   border-color: #2c3138;
 }
 
-body.dark-mode .message .background-transparent-darker-before::before {
+body.dark-mode .message .background-transparent-darker-before::before,
+body.dark-mode .rcx-message .background-transparent-darker-before::before {
   background: transparent;
 }
 
 body.dark-mode .message .message-actions,
-body.dark-mode .message .rc-member-list__counter {
+body.dark-mode .message .rc-member-list__counter,
+body.dark-mode .rcx-message .message-actions,
+body.dark-mode .rcx-message .rc-member-list__counter {
   background: #1a1d21;
   border-color: #23272c;
   color: #a5adb8;
@@ -1053,7 +1127,51 @@ body.dark-mode .message .rc-member-list__counter {
 body.dark-mode .message .message-actions .message-actions__button:hover,
 body.dark-mode .message .message-actions .message-actions__menu:hover,
 body.dark-mode .message .rc-member-list__counter .message-actions__button:hover,
-body.dark-mode .message .rc-member-list__counter .message-actions__menu:hover {
+body.dark-mode .message .rc-member-list__counter .message-actions__menu:hover,
+body.dark-mode .rcx-message .message-actions .message-actions__button:hover,
+body.dark-mode .rcx-message .message-actions .message-actions__menu:hover,
+body.dark-mode .rcx-message .rc-member-list__counter .message-actions__button:hover,
+body.dark-mode .rcx-message .rc-member-list__counter .message-actions__menu:hover {
+  background: #23272c;
+}
+
+body.dark-mode .rcx-message-toolbox {
+  background: #1a1d21;
+  border-color: #23272c;
+  color: #a5adb8;
+}
+
+body.dark-mode .rcx-message-container .rcx-message-generic-preview {
+  border: .15rem solid #23272c;
+}
+
+body.dark-mode .rcx-message-container .rcx-message-generic-preview__content {
+  background: #1e2227;
+}
+
+body.dark-mode .rcx-message-container .rcx-message-generic-preview__content a.rcx-message-generic-preview__title {
+  color: #fff !important;
+  font-weight: bold;
+}
+
+body.dark-mode .rcx-message-container .rcx-message-generic-preview__content .rcx-message-generic-preview__description {
+  color: #a0a8b4;
+}
+
+body.dark-mode .rcx-message-container .rcx-message-generic-preview__content .rcx-message-generic-preview__footer a {
+  color: #9aa3af !important;
+}
+
+body.dark-mode .rcx-message-divider {
+  background: #1a1d21;
+  border-color: #23272c;
+}
+
+body.dark-mode .rcx-message-divider .rcx-message-divider__wrapper {
+  background: #1a1d21;
+}
+
+body.dark-mode .rcx-message-divider .rcx-message-divider__bar:after {
   background: #23272c;
 }
 
@@ -1323,6 +1441,8 @@ body.dark-mode .rcx-css-136xdpx {
 }
 
 body.dark-mode .rcx-button {
+  background-color: var(--color-darkest) !important;
+  border-color: transparent !important;
   color: var(--info-font-color);
 }
 

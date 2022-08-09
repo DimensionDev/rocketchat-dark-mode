@@ -770,7 +770,8 @@ body.dark-mode {
   }
   
   //- Messages
-  .message {
+  .message,
+  .rcx-message {
     &:hover,
     &:focus,
     &.active {
@@ -804,6 +805,13 @@ body.dark-mode {
       }
     }
 
+    .rcx-message-header__roles {
+      .rcx-message-header__role {
+        background: $dark-color-lighter;
+        color: $gray-color-light;
+      }
+    }
+
     .time {
       color: $gray-color;
     }
@@ -817,6 +825,10 @@ body.dark-mode {
         border-left: .2rem solid $border-color-light !important;
         border-radius: 0 !important;
         padding-top: .5rem !important;
+
+        .rcx-css-zrca2q {
+          border-left: .2rem solid $border-color-light !important;
+        }
       }
 
       picture {
@@ -905,8 +917,9 @@ body.dark-mode {
       color: $primary-color !important;
       padding: .1rem .2rem;
     }
-
-    .reactions > li {
+    
+    .reactions > li,
+    .rcx-message-reactions__reaction {
       background: $dark-color-lighter;
       border-color: $dark-color-lighter;
       color: $gray-color-light;
@@ -933,6 +946,50 @@ body.dark-mode {
       .message-actions__menu:hover {
         background: $dark-color-lighter;
       }
+    }
+  }
+
+  .rcx-message-toolbox {
+    background: $dark-color;
+    border-color: $dark-color-lighter;
+    color: $gray-color-light;
+  }
+
+  .rcx-message-container {
+    .rcx-message-generic-preview {
+      border: .15rem solid $border-color;
+    }
+
+    .rcx-message-generic-preview__content {
+      background: $dark-color-light;
+
+      a.rcx-message-generic-preview__title {
+        color: $light-color !important;
+        font-weight: bold;
+      }
+
+      .rcx-message-generic-preview__description {
+        color: $gray-color;
+      }
+
+      .rcx-message-generic-preview__footer {
+        a {
+          color: $gray-color-dark !important;
+        }
+      }
+    }
+  }
+
+  .rcx-message-divider {
+    background: $dark-color;
+    border-color: $border-color;
+
+    .rcx-message-divider__wrapper {
+      background: $dark-color;
+    }
+
+    .rcx-message-divider__bar:after {
+      background: $border-color;
     }
   }
 
@@ -1199,6 +1256,8 @@ body.dark-mode {
   }
   
   .rcx-button {
+    background-color: var(--color-darkest) !important;
+    border-color: transparent !important;
     color: var(--info-font-color);
   }
   
