@@ -812,12 +812,16 @@ body.dark-mode {
       }
     }
 
+    .rcx-message-header__name {
+      color: $light-color-dark !important;
+    }
+
     .time {
       color: $gray-color;
     }
 
     .rcx-box--full {
-      color: $gray-color;
+      color: $gray-color-light;
 
       blockquote {
         background: transparent !important;
@@ -1000,6 +1004,12 @@ body.dark-mode {
     color: $light-color-dark !important;
   }
 
+  .rcx-room-header {
+    .rcx-tag {
+      background: $dark-color-light;
+    }
+  }
+
   //- Footer
   .rc-message-box__container {
     background: transparent;
@@ -1024,7 +1034,7 @@ body.dark-mode {
   }
 
   .rcx-message-body {
-    color: $light-color-dark;
+    color: $gray-color-lightest;
   }
 
   .rc-message-box .reply-preview {
