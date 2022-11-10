@@ -335,6 +335,12 @@ textarea {
 .rcx-sidebar {
   background: var(--sidebar-background) !important;
   border-right: .0625rem solid var(--sidebar-border);
+
+  .rcx-button-group {
+    &.rcx-button-group--medium > .rcx-button-group__item {
+      margin-right: 0;
+    }
+  }
 }
 
 //- Dark Mode Variables
@@ -439,6 +445,11 @@ body.dark-mode {
     .rcx-tag--default {
       background-color: unset; 
     }
+  }
+
+  /* Home */
+  .rcx-css-nu5inc {
+    color: var(--primary-font-color) !important;
   }
 
   /* Attachements content */
@@ -654,6 +665,10 @@ body.dark-mode {
   }
 
   //- Main
+  .rcx-css-1lrqran {
+    background-color: $dark-color !important;
+  }
+
   .main-content {
     .start {
       font-weight: 900;
@@ -704,17 +719,22 @@ body.dark-mode {
       }
     }
 
-    aside.rcx-vertical-bar,    /* right aside (threads, search, etc.) */
+    aside.rcx-vertical-bar,                          /* right aside (threads, search, etc.) */
     .rcx-css-ccvr3m,                                 /* thread list message */
     .rcx-css-1j3nsmc,                                /* thread list message */
-    .rcx-css-1bmadou,                                /* thread list header */
-    .rcx-css-1yhzjdg                                 /* thread list search bar */
+    .rcx-css-27o1c,                                /* thread list header */
+    .rcx-css-1yhzjdg,                                /* thread list search bar */
+    .rcx-css-1r8mqrs,
+    .rcx-css-tmxuv6,
+    .rcx-css-1pad5y8
     {
       --rcx-color-neutral-300: #{$border-color};
       border-color: $border-color !important;
     }
 
     .rcx-vertical-bar {
+      border-inline-start-color: $border-color !important;
+
       .rcx-tag {
         background: $dark-color-lighter;
         color: $gray-color-light;
@@ -729,17 +749,32 @@ body.dark-mode {
       background: $primary-color !important;
     }
 
-    /* Files List */
-    .rcx-css-18t0quo 
+    .rcx-css-27o1cj {
+      border-block-end-color: transparent !important;
+    }
+    
+    .rcx-avatar__element--x332 {
+      border-radius: 1rem;
+      height: 8rem;
+      width: 8rem;
+    }
+
+    /* Threads, Files List */
+    .rcx-css-1wqjl63,
+    .rcx-css-ci29i6,
+    .rcx-css-14g816d
     {
+      border-color: $border-color !important;
+
       &.hover,
       &:hover {
         background: $bg-color-dark;
+        border-color: $border-color !important;
       }
 
       &.focus,
       &:focus {
-        border-color: $border-color;
+        border-color: $border-color !important;
       }
     }
 
@@ -1004,6 +1039,11 @@ body.dark-mode {
     color: $light-color-dark !important;
   }
 
+  .rcx-room-header .rcx-css-ps0pgs {
+    border-color: $border-color;
+    color: $light-color-dark !important;
+  }
+
   .rcx-room-header {
     .rcx-tag {
       background: $dark-color-light;
@@ -1037,6 +1077,10 @@ body.dark-mode {
     color: $gray-color-lightest;
   }
 
+  .rc-message-box {
+    background: $dark-color;
+  }
+
   .rc-message-box .reply-preview {
     background: $dark-color;
   }
@@ -1050,15 +1094,22 @@ body.dark-mode {
   .simplebar-content > .rcx-css-fr02gd { /* main content */
     background-color: var(--color-dark);
   }
+
+  .rcx-css-1e1zwn9,
+  .rcx-css-1rcvyx {
+    background-color: $dark-color !important;
+  }
+
+  .rcx-css-19z81xy {
+    color: var(--primary-font-color) !important;
+  }
   
   .rcx-css-txktj6 { /* Account settings page background */
     background-color: var(--color-dark) !important;
   }
 
-  .rcx-css-10nb3ed {
-    background-color: $dark-color-light !important;
-  }
-
+  .rcx-css-10nb3ed,
+  .rcx-css-1500goy,
   .rcx-css-1of9j10 {
     background-color: $dark-color-light !important;
   }
@@ -1080,6 +1131,7 @@ body.dark-mode {
   
   .rc-scrollbars-container { /* Panels sidebar */
     background-color: var(--sidebar-background);
+    border-right: 0;
   }
   
   .rcx-css-15hfnte {  /* Panels sidebar header */

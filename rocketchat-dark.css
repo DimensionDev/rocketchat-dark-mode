@@ -514,8 +514,12 @@ textarea {
   border-right: .06rem solid var(--sidebar-border);
 }
 
+.rcx-sidebar .rcx-button-group.rcx-button-group--medium > .rcx-button-group__item {
+  margin-right: 0;
+}
+
 body.dark-mode {
-  /* Breadcrumbs discussions */ /* Attachements content */ /* Pinned messages content */ /* Message "You joined a new private conversation with" */ /* Firefox does the dimming on hover automatically. We emulate it for Webkit-based browsers. */
+  /* Breadcrumbs discussions */ /* Home */ /* Attachements content */ /* Pinned messages content */ /* Message "You joined a new private conversation with" */ /* Firefox does the dimming on hover automatically. We emulate it for Webkit-based browsers. */
 }
 
 body.dark-mode {
@@ -589,6 +593,10 @@ body.dark-mode {
 
 body.dark-mode .rcx-room-header .rcx-tag--default {
   background-color: unset;
+}
+
+body.dark-mode .rcx-css-nu5inc {
+  color: var(--primary-font-color) !important;
 }
 
 body.dark-mode .rcx-message-attachment .rcx-attachment__content .rcx-box--full {
@@ -786,8 +794,12 @@ body.dark-mode .rcx-tag--secondary:hover {
   opacity: .8;
 }
 
+body.dark-mode .rcx-css-1lrqran {
+  background-color: #1a1d21 !important;
+}
+
 body.dark-mode .main-content {
-  /* Files List */ /* Settings List */
+  /* Threads, Files List */ /* Settings List */
 }
 
 body.dark-mode .main-content .start {
@@ -840,10 +852,17 @@ body.dark-mode .main-content .rcx-vertical-bar .rcx-avatar--x332 {
 body.dark-mode .main-content aside.rcx-vertical-bar,
 body.dark-mode .main-content .rcx-css-ccvr3m,
 body.dark-mode .main-content .rcx-css-1j3nsmc,
-body.dark-mode .main-content .rcx-css-1bmadou,
-body.dark-mode .main-content .rcx-css-1yhzjdg {
+body.dark-mode .main-content .rcx-css-27o1c,
+body.dark-mode .main-content .rcx-css-1yhzjdg,
+body.dark-mode .main-content .rcx-css-1r8mqrs,
+body.dark-mode .main-content .rcx-css-tmxuv6,
+body.dark-mode .main-content .rcx-css-1pad5y8 {
   --rcx-color-neutral-300: #23272c;
   border-color: #23272c !important;
+}
+
+body.dark-mode .main-content .rcx-vertical-bar {
+  border-inline-start-color: #23272c !important;
 }
 
 body.dark-mode .main-content .rcx-vertical-bar .rcx-tag {
@@ -859,14 +878,39 @@ body.dark-mode .main-content button.rcx-contextual-message__follow + div.rcx-box
   background: #2563eb !important;
 }
 
-body.dark-mode .main-content .rcx-css-18t0quo.hover,
-body.dark-mode .main-content .rcx-css-18t0quo:hover {
-  background: #21252a;
+body.dark-mode .main-content .rcx-css-27o1cj {
+  border-block-end-color: transparent !important;
 }
 
-body.dark-mode .main-content .rcx-css-18t0quo.focus,
-body.dark-mode .main-content .rcx-css-18t0quo:focus {
-  border-color: #23272c;
+body.dark-mode .main-content .rcx-avatar__element--x332 {
+  border-radius: 1rem;
+  height: 8rem;
+  width: 8rem;
+}
+
+body.dark-mode .main-content .rcx-css-1wqjl63,
+body.dark-mode .main-content .rcx-css-ci29i6,
+body.dark-mode .main-content .rcx-css-14g816d {
+  border-color: #23272c !important;
+}
+
+body.dark-mode .main-content .rcx-css-1wqjl63.hover,
+body.dark-mode .main-content .rcx-css-1wqjl63:hover,
+body.dark-mode .main-content .rcx-css-ci29i6.hover,
+body.dark-mode .main-content .rcx-css-ci29i6:hover,
+body.dark-mode .main-content .rcx-css-14g816d.hover,
+body.dark-mode .main-content .rcx-css-14g816d:hover {
+  background: #21252a;
+  border-color: #23272c !important;
+}
+
+body.dark-mode .main-content .rcx-css-1wqjl63.focus,
+body.dark-mode .main-content .rcx-css-1wqjl63:focus,
+body.dark-mode .main-content .rcx-css-ci29i6.focus,
+body.dark-mode .main-content .rcx-css-ci29i6:focus,
+body.dark-mode .main-content .rcx-css-14g816d.focus,
+body.dark-mode .main-content .rcx-css-14g816d:focus {
+  border-color: #23272c !important;
 }
 
 body.dark-mode .main-content .rcx-css-nbqasl {
@@ -1186,6 +1230,11 @@ body.dark-mode .rcx-vertical-bar .rcx-box:not(.rcx-button-group):not(.rcx-button
   color: #fafafa !important;
 }
 
+body.dark-mode .rcx-room-header .rcx-css-ps0pgs {
+  border-color: #23272c;
+  color: #fafafa !important;
+}
+
 body.dark-mode .rcx-room-header .rcx-tag {
   background: #1e2227;
 }
@@ -1224,6 +1273,10 @@ body.dark-mode .rcx-message-body {
   color: #b6bdc6;
 }
 
+body.dark-mode .rc-message-box {
+  background: #1a1d21;
+}
+
 body.dark-mode .rc-message-box .reply-preview {
   background: #1a1d21;
 }
@@ -1237,14 +1290,21 @@ body.dark-mode .simplebar-content > .rcx-css-fr02gd {
   /* main content */ background-color: var(--color-dark);
 }
 
+body.dark-mode .rcx-css-1e1zwn9,
+body.dark-mode .rcx-css-1rcvyx {
+  background-color: #1a1d21 !important;
+}
+
+body.dark-mode .rcx-css-19z81xy {
+  color: var(--primary-font-color) !important;
+}
+
 body.dark-mode .rcx-css-txktj6 {
   /* Account settings page background */ background-color: var(--color-dark) !important;
 }
 
-body.dark-mode .rcx-css-10nb3ed {
-  background-color: #1e2227 !important;
-}
-
+body.dark-mode .rcx-css-10nb3ed,
+body.dark-mode .rcx-css-1500goy,
 body.dark-mode .rcx-css-1of9j10 {
   background-color: #1e2227 !important;
 }
@@ -1264,6 +1324,7 @@ body.dark-mode .rcx-css-1wm5na {
 
 body.dark-mode .rc-scrollbars-container {
   /* Panels sidebar */ background-color: var(--sidebar-background);
+  border-right: 0;
 }
 
 body.dark-mode .rcx-css-15hfnte {
