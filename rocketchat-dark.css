@@ -520,7 +520,7 @@ textarea {
 
 .rcx-sidebar-item--selected,
 .rcx-sidebar-item:active {
-  background-color: var(--rcx-sidebar-color-surface-hover, var(--rcx-color-surface-hover, var(--rcx-color-neutral-200, #f2f3f5))) !important;
+  background-color: #24282f !important;
 }
 
 body.dark-mode {
