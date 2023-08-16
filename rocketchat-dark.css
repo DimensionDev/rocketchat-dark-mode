@@ -518,6 +518,11 @@ textarea {
   margin-right: 0;
 }
 
+.rcx-sidebar-item--selected,
+.rcx-sidebar-item:active {
+  background-color: var(--rcx-sidebar-color-surface-hover, var(--rcx-color-surface-hover, var(--rcx-color-neutral-200, #f2f3f5))) !important;
+}
+
 body.dark-mode {
   /* Breadcrumbs discussions */ /* Home */ /* Attachements content */ /* Pinned messages content */ /* Message "You joined a new private conversation with" */ /* Firefox does the dimming on hover automatically. We emulate it for Webkit-based browsers. */
 }
@@ -796,6 +801,11 @@ body.dark-mode .rcx-tag--secondary:hover {
 
 body.dark-mode .rcx-css-1lrqran {
   background-color: #1a1d21 !important;
+}
+
+body.dark-mode .rcx-sidebar-item--selected,
+body.dark-mode .rcx-sidebar-item:active {
+  background-color: #1e2227 !important;
 }
 
 body.dark-mode .main-content {
